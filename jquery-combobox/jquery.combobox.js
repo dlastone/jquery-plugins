@@ -43,7 +43,7 @@
 					autoClose: true,
 					defaultValue: '',
 					displayText: '-- select --',
-					height: 20,
+					height: 30,
 					multiple: false,
 					scrollable: false,
 					scrollHeight: 200,
@@ -93,7 +93,7 @@
 					opts.multiple = $this.attr("multiple");
 					opts.autoClose = false;
 					opts.sticky = true;
-				};
+				}
 				$this.attr("multiple", opts.multiple);
 
 				//hide original select
@@ -138,8 +138,8 @@
 
 				// --- WIRE UP EVENTS ---
 				$(this).change(function (event) {
-					var displaytext = displayText($this);
-					$('#' + _inst + '-text').html(displaytext);
+					const _displaytext = displayText($this);
+					$('#' + _inst + '-text').html(_displaytext);
 				});
 				// show dropdown 
 				$('#' + _inst + '-text').click(function (event) {
@@ -185,7 +185,7 @@
 									}
 								}
 							}
-							if (opts.openDirection == 'up') { $(this).css({ top: $text.offset().top - ($(this).outerHeight(true) + 10) }); };
+							if (opts.openDirection == 'up') { $(this).css({ top: $text.offset().top - ($(this).outerHeight(true) + 10) }); }
 
 
 							if (opts.filterKeys) {
@@ -217,7 +217,6 @@
 					//$('#' + optionsId + ':visible').css("left", $(this).offset().left);
 
 
-
 				});
 
 				// select list item(s)
@@ -229,9 +228,9 @@
 						$(this).parent().find(".selected").removeClass("selected");
 						for (var i = 0; i < sel.options.length; i++) {
 							sel.options[i].selected = false;
-						};
+						}
 						selected_values = {};
-					};
+					}
 					if (selected_values[id]) {
 						delete selected_values[id];
 						$(this).removeClass("selected");
@@ -241,12 +240,12 @@
 							selected_values[id] = val;
 							$(this).addClass("selected");
 						}
-					};
+					}
 					$(sel).data("selected_values", selected_values);
 
-					for (var i = 0; i < sel.options.length; i++) {
-						sel.options[i].selected = (selected_values[sel.options[i].value] && sel.options[i].value != '');
-					};
+					for (var j = 0; j < sel.options.length; j++) {
+						sel.options[j].selected = (selected_values[sel.options[j].value] && sel.options[j].value != '');
+					}
 
 					$('#' + _inst + '-text').html(displayText($(sel)));
 					if (opts.autoClose) {
@@ -257,7 +256,7 @@
 				});
 
 				$(document).click(function (e) {
-					if (!(e.target.id.indexOf(_inst) >= 0)) {
+					if ((e.target.id.indexOf(_inst) < 0)) {
 						$('#' + _inst + '-options').slideUp(100);
 						$('#' + _inst + '-search').unbind('keyup').remove();
 						$('#' + _inst + '-text').html(displayText($this));
@@ -272,7 +271,7 @@
 				var sel = $this.get(0);
 				var opts = $this.data('jquery-combobox');
 				var selected_values = $this.data('selected_values');
-				_itemCount = sel.options.length;
+				var _itemCount = sel.options.length;
 				var _class = '', _text = '', _value = '', selected = '';
 
 				if (opts) {
@@ -284,24 +283,24 @@
 							_class = String($(sel.options[i]).attr("class"));
 							selected = ' selected';
 							if (sel.options[i].selected) {
-								selected = ' selected';
+								//selected = ' selected';
 								selected_values[sel.options[i].value] = sel.options[i].text;
 								$('#' + opts.inst + '-options ul').append('<li id="' + opts.inst + '-item-' + _value + '" class="' + _class + ' ' + opts.baseid + ' ' + opts.baseid + '-li' + selected + '">' + _text + '</li>');
 							}
 						}
 					}
 
-					for (var i = 0; i < _itemCount; i++) {
-						_value = String(sel.options[i].value);
-						_text = String(sel.options[i].text);
-						_class = String($(sel.options[i]).attr("class"));
+					for (var j = 0; j < _itemCount; j++) {
+						_value = String(sel.options[j].value);
+						_text = String(sel.options[j].text);
+						_class = String($(sel.options[j]).attr("class"));
 						selected = '';
-						if (sel.options[i].value == opts.defaultValue && sel.options[i].value != '') {
-							sel.options[i].selected = true;
+						if (sel.options[j].value == opts.defaultValue && sel.options[j].value != '') {
+							sel.options[j].selected = true;
 						}
-						if (sel.options[i].selected) {
+						if (sel.options[j].selected) {
 							selected = ' selected';
-							selected_values[sel.options[i].value] = sel.options[i].text;
+							selected_values[sel.options[j].value] = sel.options[j].text;
 							if (filter) { continue; }
 						}
 						if (filter) {
@@ -345,8 +344,8 @@
 		for (var i = 0; i < sel.options.length; i++) {
 			if (sel.options[i].selected) {
 				dt += (dt == '') ? '' + (sel.options[i].text) : ', ' + (sel.options[i].text);
-			};
-		};
+			}
+		}
 		if (opts) {
 			$('#' + opts.inst + '-text').after('<span id="calculatetextsize" style="position:absolute;z-index:-1;visibility:hidden;">' + dt + '</span>');
 			var _maxWidth = opts.width - 30;
@@ -355,12 +354,12 @@
 			if (_currentWidth > _maxWidth) {
 				$('#' + opts.inst + '-text').attr("title", dt);
 				dt = dt.substr(0, parseInt(_maxWidth / _textSizeRatio)) + '...';
-			};
+			}
 			$('#calculatetextsize').remove();
 			return (dt) ? dt : opts.displayText;
 		}
 		return dt;
-	};
+	}
 
 
 
@@ -373,6 +372,6 @@
 		} else {
 			$.error('Method ' + method + ' does not exist on jQuery.tooltip');
 		}
-	};
+	}
 
 })(jQuery); 
