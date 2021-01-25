@@ -11,3 +11,5 @@ plugins include:
 * __jquery-shadow__ - _add shadow - maybe not so useful when this is now doable in css_
 * __jquery-statusMessage__ - _show a centered status_
 * __jquery.microToolTip__ - _add a tooltip_
+
+almost all plugins have example code
