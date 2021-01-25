@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Session Timeout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="jquery-sessionStatus.css" type="text/css">
+    <style type="text/css">
+        .mainbody {
+            position: absolute;
+            top:0;
+            bottom: 40px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content mainbody">
+        <div class="container" style="position: relative; background:#000;min-height:40px;">
+            <div style="position:relative;float:right;padding:.2em;">
+                <button id="btnReset" onclick="action('reset');" class="btn btn-default">
+                    <span class="glyphicon glyphicon-time" aria-hidden="true"></span> Reset Session</button>
+            </div>
+            <div style="position:relative;float:right;padding:.2em;">
+                <button id="btnReload" onclick="action('reload');" class="btn btn-default">
+                    <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Refresh Page</button>
+            </div>
+            <div id="session" class="well"></div>
+            <div><br/></div>    
+        </div>
+        <div class="container jumbotron" style="border:solid 1px #333; background:#eee;overflow:auto;">
+            <h2>Testing the "Session Status" plugin.</h2><br/><br/>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacus purus, porta eu diam vel, vestibulum finibus risus. Maecenas eleifend posuere euismod. Quisque dolor mi, dignissim id elit sit amet, aliquet faucibus nulla. Suspendisse lobortis rhoncus blandit. Mauris egestas sem ut mauris ultrices, non egestas massa tempus. Nullam et suscipit quam. Nulla metus nulla, molestie non imperdiet id, sagittis quis turpis. Nullam vel purus et tortor dignissim viverra non et lectus. Aliquam in pharetra lacus, vel bibendum quam. Nam sit amet interdum magna, ut ullamcorper nunc. Nam luctus blandit mauris, quis malesuada mi bibendum eget. Morbi pulvinar venenatis laoreet. Curabitur in scelerisque quam.</p>
+            <p>Sed lacinia, enim ut efficitur molestie, mauris massa commodo elit, sit amet cursus ante nisi in leo. Cras tempus aliquet felis, et convallis sem tempus eget. Duis accumsan euismod ultrices. Maecenas eleifend leo ac nibh luctus tincidunt. Pellentesque tincidunt quis massa eget molestie. Proin elementum turpis diam, commodo venenatis est semper nec. Vestibulum elementum ante eros, ut dictum urna pulvinar sit amet. Nunc efficitur arcu ut ornare fermentum. Pellentesque neque orci, suscipit ut varius nec, faucibus posuere purus. Nam pellentesque sem a cursus aliquam. Quisque nibh lectus, lacinia eget hendrerit id, feugiat a lectus. Integer id finibus massa, facilisis viverra ipsum. Morbi gravida metus at pulvinar iaculis. Nulla efficitur arcu lorem, non porta ligula blandit non.</p>
+            <div><br/></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="jquery-sessionStatus.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('#session').sessionStatus({session:20,auto:true});
+
+        });
+
+        function action(a){
+            $('#session').sessionStatus(a);
+            return false;
+        }
+    </script>
+</body>
+</html>

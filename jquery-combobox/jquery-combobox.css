@@ -1,0 +1,64 @@
+﻿.jquery-combobox {}
+
+.jquery-combobox-hide { display:none; }
+
+.jquery-combobox-text
+{
+	border:solid 1px #ccc;
+	padding: 2px 2px 2px 4px;
+	background: #fff url('jquery-combobox-arrow.png') no-repeat right !important;
+	cursor:default;
+	display:inline-block;
+	height: 20px;
+	vertical-align:text-top;
+	overflow:hidden;
+	white-space:nowrap;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+.jquery-combobox-text:hover{
+	background:#fff url('jquery-combobox-arrow-hover.png') no-repeat right !important;
+}
+
+.jquery-combobox-text .disable{
+	color: #999 !Important;
+	background: #eee;
+}
+
+.jquery-combobox-options 
+{
+	position: absolute; 
+	margin:0;
+	padding:0; 
+	cursor:default; 
+	border:solid 1px #999; 
+	background:#fff; 
+	display:none;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+}
+.jquery-combobox-options.scrollable{ overflow:auto; }
+
+.jquery-combobox-options ul
+{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	background:#fff;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border:solid 1px #fff;
+}
+.jquery-combobox-options ul li 
+{
+	background: #fff;
+	padding-left: 2px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border: solid 1px #eee;
+	margin-bottom:1px;
+	overflow:hidden;
+}
+.jquery-combobox-options ul li:hover { background: #edc;}
+.jquery-combobox-options ul li.selected {background: #69f; color:#fff;}
+.jquery-combobox-options ul li.selected:hover {background: #36f; color:#fff;}

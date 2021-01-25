@@ -1,0 +1,56 @@
+﻿
+/* Corner radius */
+.ui-corner-tl { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; }
+.ui-corner-tr { -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px; }
+.ui-corner-bl { -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; }
+.ui-corner-br { -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+.ui-corner-top { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px; }
+.ui-corner-bottom { -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+.ui-corner-right {  -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; border-top-right-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; border-bottom-right-radius: 4px; }
+.ui-corner-left { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; border-top-left-radius: 4px; -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; border-bottom-left-radius: 4px; }
+.ui-corner-all { -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px; }
+
+.statusMessageContents{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.statusMessage {
+    display: none;
+    font-family: Calabri, sans-serif;
+    font-size: small;
+    position: absolute;
+    background-color: #bf6803;
+    border: 1px solid #333;
+    padding: 1px;
+    cursor: default;
+}
+
+.statusMessage .header {
+    background-color: #fec384;
+    font-weight: bold;
+    padding: 0 .4em;
+    margin-bottom: 1px;
+    color: #444;
+}
+
+.statusMessage .footer {
+    background-color: #fec384;
+    font-weight: bold;
+    padding: 0 .4em;
+    margin-bottom: 1px;
+    color: #444;
+}
+
+.statusMessage .animated{
+    background-image: url(pbar-ani.gif);
+    background-position: left center;    
+}
+
+.statusMessage .message {
+    font-size: medium;
+    background-color: #feddbb;
+    padding: .4em;
+    margin-bottom: 1px;
+    color: #333;
+}

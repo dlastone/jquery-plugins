@@ -1,0 +1,22 @@
+.sessionStatus{
+    position: relative;
+    float: right;
+    margin: .2em;
+    border: solid 1px #333;
+    padding: .4em;
+    color: #333;
+}
+.sessionStatus.warning{
+    background: #f99;
+}
+.sessionStatus span.hide{
+    position: absolute;
+    right: 2px;
+    margin-top: -6px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-variant: small-caps;
+    font-size: 8pt;
+}
+.sessionStatus span.hide a{ color: #eee; }
+.sessionStatus:hover span.hide a{ color: #ccc; }
+.sessionStatus span.hide a:hover{ color: #39f; }

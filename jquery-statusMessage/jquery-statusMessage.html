@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link href="jquery-statusMessage.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+    <script src="jquery-statusMessage.js"></script>
+</head>
+<body>
+    
+    <div><br/></div>
+    <button type="button" class="status">create status object</button>
+    <button type="button" class="toggle">processing animation</button>
+    <button type="button" class="toggle">turn animation off</button>
+    <button type="button" class="destroy">destroy object</button>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('button.status').click(function() {
+                $(this).statusMessage({
+                    headerText: 'update status',
+                    footerText: 'please wait...',
+                    messageText: 'Invoices are being processed...',
+                    show: true,
+                    animated: true,
+                    closeOnClick: true
+                });
+
+                return false;
+            });
+
+            $('button.toggle').click(function() {
+                if($(this).text().indexOf('processing')>=0){
+                    $('button.status').statusMessage("animated",true);
+                    $('button.status').statusMessage("messageText","processing data...");
+                }
+                else{
+                    $('button.status').statusMessage("animated",false);
+                    $('button.status').statusMessage("messageText","processing complete<br>[close]");
+                }
+            });
+
+            $('button.destroy').click(function() {
+                $('button.status').statusMessage("destroy");
+            });
+
+        });
+
+    </script>
+</body>
+</html>

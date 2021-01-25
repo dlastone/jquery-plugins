@@ -1,0 +1,14 @@
+﻿
+.jq-shadow { position:absolute; width:8px; height: 8px; padding:0; margin:0; }
+.jq-shadow .hide { display:none; }
+
+.jq-shadow-tl { background-image:url(images/shadow-tl.png); background-repeat:no-repeat; }
+.jq-shadow-tc { background-image:url(images/shadow-tc.png); background-repeat:repeat-x; }
+.jq-shadow-tr { background-image:url(images/shadow-tr.png); background-repeat:no-repeat; }
+
+.jq-shadow-ml { background-image:url(images/shadow-ml.png); background-repeat:repeat-y; }
+.jq-shadow-mr { background-image:url(images/shadow-mr.png); background-repeat:repeat-y; }
+
+.jq-shadow-bl { background-image:url(images/shadow-bl.png); background-repeat:no-repeat; }
+.jq-shadow-bc { background-image:url(images/shadow-bc.png); background-repeat:repeat-x; }
+.jq-shadow-br { background-image:url(images/shadow-br.png); background-repeat:no-repeat; }

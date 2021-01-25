@@ -1,0 +1,12 @@
+﻿/* Style-Sheet for jquery-paging plugin */
+
+.jquery-paging {display:block; background:#efefef; border:1px solid #999; padding: .4em .4em 0 .4em; }
+.jquery-paging ul { float:left;list-style:none outside none;margin:0;padding:0;  }
+.jquery-paging ul li { float: left; margin: 0 .2em 0 0; }
+
+.jquery-paging ul li a { text-decoration:none;color:#333;background:#cfcfcf;padding:0 .3em 0 .3em;border-left:1px solid #999;border-right:1px solid #999;border-top:1px solid #999; }
+.jquery-paging ul li a:hover { background: #fdc; }
+
+.jquery-paging ul li.paging-active a { background: #fff; }
+
+.jquery-paging .paging-info { float: right;}
