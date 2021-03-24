@@ -1,4 +1,6 @@
-﻿.jquery-combobox {}
+﻿.jquery-combobox {
+	background-color: inherit;
+}
 
 .jquery-combobox-hide { display:none; }
 
@@ -13,17 +15,32 @@
 	vertical-align:text-top;
 	overflow:hidden;
 	white-space:nowrap;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 }
 .jquery-combobox-text:hover{
 	background:#fff url('jquery-combobox-arrow-hover.png') no-repeat right !important;
+	outline: #333 auto 1px;
+}
+
+.jquery-combobox-text:focus{
+	outline: #333 auto 1px;
 }
 
 .jquery-combobox-text .disable{
 	color: #999 !Important;
 	background: #eee;
 }
+
+.jquery-combobox-text input{
+	border: solid 1px transparent !important;
+}
+.jquery-combobox-text input:focus{
+	border: solid 1px transparent !important;
+	outline: none;
+}
+
 
 .jquery-combobox-options 
 {
@@ -34,8 +51,9 @@
 	border:solid 1px #999; 
 	background:#fff; 
 	display:none;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 }
 .jquery-combobox-options.scrollable{ overflow:auto; }
 
@@ -45,16 +63,18 @@
 	margin:0;
 	padding:0;
 	background:#fff;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
 	border:solid 1px #fff;
 }
 .jquery-combobox-options ul li 
 {
 	background: #fff;
 	padding-left: 2px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
 	border: solid 1px #eee;
 	margin-bottom:1px;
 	overflow:hidden;
